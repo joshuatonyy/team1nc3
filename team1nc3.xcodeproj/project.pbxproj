@@ -18,6 +18,12 @@
 		423FB9A02A652BAB001C9EC5 /* Feature1RepositorySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB99F2A652BAB001C9EC5 /* Feature1RepositorySample.swift */; };
 		423FB9A92A6534F5001C9EC5 /* AccountPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9A82A6534F5001C9EC5 /* AccountPageViews.swift */; };
 		423FB9AB2A65BBE2001C9EC5 /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9AA2A65BBE2001C9EC5 /* Color+Theme.swift */; };
+		423FB9AD2A65C007001C9EC5 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9AC2A65C007001C9EC5 /* TextFieldComponent.swift */; };
+		423FB9BC2A66E823001C9EC5 /* TextWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9BB2A66E823001C9EC5 /* TextWithButton.swift */; };
+		423FB9C12A6713B0001C9EC5 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9C02A6713B0001C9EC5 /* SettingView.swift */; };
+		423FB9C32A672B72001C9EC5 /* DropdownGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9C22A672B72001C9EC5 /* DropdownGender.swift */; };
+		423FB9C62A6859DD001C9EC5 /* SheetDisability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9C52A6859DD001C9EC5 /* SheetDisability.swift */; };
+		423FB9C82A6871AF001C9EC5 /* DropdownDisability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB9C72A6871AF001C9EC5 /* DropdownDisability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +39,12 @@
 		423FB99F2A652BAB001C9EC5 /* Feature1RepositorySample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature1RepositorySample.swift; sourceTree = "<group>"; };
 		423FB9A82A6534F5001C9EC5 /* AccountPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViews.swift; sourceTree = "<group>"; };
 		423FB9AA2A65BBE2001C9EC5 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		423FB9AC2A65C007001C9EC5 /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		423FB9BB2A66E823001C9EC5 /* TextWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithButton.swift; sourceTree = "<group>"; };
+		423FB9C02A6713B0001C9EC5 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		423FB9C22A672B72001C9EC5 /* DropdownGender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownGender.swift; sourceTree = "<group>"; };
+		423FB9C52A6859DD001C9EC5 /* SheetDisability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDisability.swift; sourceTree = "<group>"; };
+		423FB9C72A6871AF001C9EC5 /* DropdownDisability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownDisability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,7 @@
 		423FB94A2A615961001C9EC5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				423FB9BD2A671392001C9EC5 /* SettingPage */,
 				423FB9A12A65328F001C9EC5 /* AccountPage */,
 				423FB9522A615C4A001C9EC5 /* Feature1 */,
 			);
@@ -260,6 +273,10 @@
 		423FB9A52A65348B001C9EC5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				423FB9C42A6859A6001C9EC5 /* SheetDisability */,
+				423FB9BA2A66E78B001C9EC5 /* TextWithButton */,
+				423FB9B12A66739F001C9EC5 /* TextField */,
+				423FB9AE2A65C836001C9EC5 /* Dropdown */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -270,6 +287,63 @@
 				423FB9A82A6534F5001C9EC5 /* AccountPageViews.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		423FB9AE2A65C836001C9EC5 /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9C22A672B72001C9EC5 /* DropdownGender.swift */,
+				423FB9C72A6871AF001C9EC5 /* DropdownDisability.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
+		423FB9B12A66739F001C9EC5 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9AC2A65C007001C9EC5 /* TextFieldComponent.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		423FB9BA2A66E78B001C9EC5 /* TextWithButton */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9BB2A66E823001C9EC5 /* TextWithButton.swift */,
+			);
+			path = TextWithButton;
+			sourceTree = "<group>";
+		};
+		423FB9BD2A671392001C9EC5 /* SettingPage */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9BE2A67139B001C9EC5 /* Presenters */,
+			);
+			path = SettingPage;
+			sourceTree = "<group>";
+		};
+		423FB9BE2A67139B001C9EC5 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9BF2A6713A1001C9EC5 /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		423FB9BF2A6713A1001C9EC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9C02A6713B0001C9EC5 /* SettingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		423FB9C42A6859A6001C9EC5 /* SheetDisability */ = {
+			isa = PBXGroup;
+			children = (
+				423FB9C52A6859DD001C9EC5 /* SheetDisability.swift */,
+			);
+			path = SheetDisability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,11 +419,17 @@
 				423FB99A2A652AE1001C9EC5 /* Feature1Component1.swift in Sources */,
 				423FB9A92A6534F5001C9EC5 /* AccountPageViews.swift in Sources */,
 				423FB99C2A652B66001C9EC5 /* Feature1ViewModel.swift in Sources */,
+				423FB9AD2A65C007001C9EC5 /* TextFieldComponent.swift in Sources */,
 				423FB9AB2A65BBE2001C9EC5 /* Color+Theme.swift in Sources */,
 				423FB93D2A61587E001C9EC5 /* ContentView.swift in Sources */,
+				423FB9C12A6713B0001C9EC5 /* SettingView.swift in Sources */,
+				423FB9C62A6859DD001C9EC5 /* SheetDisability.swift in Sources */,
 				423FB9A02A652BAB001C9EC5 /* Feature1RepositorySample.swift in Sources */,
 				423FB9982A652ABD001C9EC5 /* Feature1View.swift in Sources */,
+				423FB9BC2A66E823001C9EC5 /* TextWithButton.swift in Sources */,
 				423FB99E2A652B9D001C9EC5 /* Feature1Model.swift in Sources */,
+				423FB9C32A672B72001C9EC5 /* DropdownGender.swift in Sources */,
+				423FB9C82A6871AF001C9EC5 /* DropdownDisability.swift in Sources */,
 				423FB93B2A61587E001C9EC5 /* team1nc3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
