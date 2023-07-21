@@ -9,9 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        Feature1View()
-        HomeView()
-     
+        TabView {
+            HomeView()
+                .tabItem{
+                    Label("Home", systemImage: "house")
+                }
+            TicketView()
+                .tabItem{
+                    Label("Ticket", systemImage: "ticket")
+                }
+            SettingView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
+        }
+    }
+}
+
+struct TicketView: View {
+    var body: some View {
+        Text("Ticket View")
     }
 }
 
