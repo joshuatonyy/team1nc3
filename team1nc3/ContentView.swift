@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Feature1View()
+//        Feature1View()
+        HomeView()
+     
     }
 }
 
