@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+<<<<<<< Updated upstream
         SettingView()
+=======
+        TicketView()
+>>>>>>> Stashed changes
     }
 }
 
