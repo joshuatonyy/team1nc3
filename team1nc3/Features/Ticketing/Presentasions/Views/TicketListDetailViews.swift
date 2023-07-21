@@ -87,11 +87,11 @@ struct TicketListDetailViews: View {
                     Picker(selection: $selectedDepartureStationIndex, label: Text("")) {
                         ForEach(0..<stations.count) { index in
                             Text(self.stations[index])
-                                .foregroundColor(Color.black) // Change color to black here
+                                .foregroundColor(Color.black)
                                 .tag(index)
                         }
                     }
-                    .font(.subheadline) // Match the font
+                    .font(.subheadline)
                     .padding(.top, 8)
 
                     // Arrival Station
@@ -105,13 +105,10 @@ struct TicketListDetailViews: View {
                             Text(self.stations[index]).tag(index)
                         }
                     }
-                    .foregroundColor(Color.black) // Change color to black
-                    .font(.subheadline) // Match the font
+                    .foregroundColor(Color.black)
+                    .font(.subheadline)
                     .padding(.top, 8)
                     
-                    // Rest of your code...
-                
-
                     .padding(.top, 8)
                     
                     // Inside your VStack
