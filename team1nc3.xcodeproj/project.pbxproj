@@ -11,6 +11,16 @@
 		423FB93D2A61587E001C9EC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423FB93C2A61587E001C9EC5 /* ContentView.swift */; };
 		423FB93F2A615880001C9EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423FB93E2A615880001C9EC5 /* Assets.xcassets */; };
 		423FB9422A615880001C9EC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423FB9412A615880001C9EC5 /* Preview Assets.xcassets */; };
+		426A33CC2A6C1F4B0056F792 /* RequestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33BB2A6C1F4B0056F792 /* RequestDataModel.swift */; };
+		426A33CD2A6C1F4B0056F792 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33BE2A6C1F4B0056F792 /* DropDownView.swift */; };
+		426A33CE2A6C1F4B0056F792 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33BF2A6C1F4B0056F792 /* MenuSection.swift */; };
+		426A33CF2A6C1F4B0056F792 /* ExpandedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33C02A6C1F4B0056F792 /* ExpandedList.swift */; };
+		426A33D02A6C1F4B0056F792 /* RequestPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33C22A6C1F4B0056F792 /* RequestPageView.swift */; };
+		426A33D12A6C1F4B0056F792 /* TicketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33C52A6C1F4B0056F792 /* TicketDetailViewModel.swift */; };
+		426A33D22A6C1F4B0056F792 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33C72A6C1F4B0056F792 /* TicketView.swift */; };
+		426A33D32A6C1F4B0056F792 /* TicketListDetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33C82A6C1F4B0056F792 /* TicketListDetailViews.swift */; };
+		426A33D42A6C1F4B0056F792 /* TicketRepositorySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33CA2A6C1F4B0056F792 /* TicketRepositorySample.swift */; };
+		426A33D52A6C1F4B0056F792 /* TicketingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33CB2A6C1F4B0056F792 /* TicketingModel.swift */; };
 		85F7F60F2A6AD65E0064FA0C /* HomeViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7F5E32A6AD65E0064FA0C /* HomeViewModels.swift */; };
 		85F7F6102A6AD65E0064FA0C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7F5E52A6AD65E0064FA0C /* MenuModel.swift */; };
 		85F7F6112A6AD65E0064FA0C /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7F5E82A6AD65E0064FA0C /* PointView.swift */; };
@@ -39,6 +49,16 @@
 		423FB93C2A61587E001C9EC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		423FB93E2A615880001C9EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		423FB9412A615880001C9EC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		426A33BB2A6C1F4B0056F792 /* RequestDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDataModel.swift; sourceTree = "<group>"; };
+		426A33BE2A6C1F4B0056F792 /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		426A33BF2A6C1F4B0056F792 /* MenuSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		426A33C02A6C1F4B0056F792 /* ExpandedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedList.swift; sourceTree = "<group>"; };
+		426A33C22A6C1F4B0056F792 /* RequestPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestPageView.swift; sourceTree = "<group>"; };
+		426A33C52A6C1F4B0056F792 /* TicketDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDetailViewModel.swift; sourceTree = "<group>"; };
+		426A33C72A6C1F4B0056F792 /* TicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		426A33C82A6C1F4B0056F792 /* TicketListDetailViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListDetailViews.swift; sourceTree = "<group>"; };
+		426A33CA2A6C1F4B0056F792 /* TicketRepositorySample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketRepositorySample.swift; sourceTree = "<group>"; };
+		426A33CB2A6C1F4B0056F792 /* TicketingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketingModel.swift; sourceTree = "<group>"; };
 		85F7F5E32A6AD65E0064FA0C /* HomeViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModels.swift; sourceTree = "<group>"; };
 		85F7F5E52A6AD65E0064FA0C /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		85F7F5E82A6AD65E0064FA0C /* PointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
@@ -135,9 +155,91 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		426A33B92A6C1F4B0056F792 /* RequestPage */ = {
+			isa = PBXGroup;
+			children = (
+				426A33BA2A6C1F4B0056F792 /* Models */,
+				426A33BC2A6C1F4B0056F792 /* Presentations */,
+			);
+			path = RequestPage;
+			sourceTree = "<group>";
+		};
+		426A33BA2A6C1F4B0056F792 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				426A33BB2A6C1F4B0056F792 /* RequestDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		426A33BC2A6C1F4B0056F792 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				426A33BD2A6C1F4B0056F792 /* Components */,
+				426A33C12A6C1F4B0056F792 /* Views */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		426A33BD2A6C1F4B0056F792 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				426A33BE2A6C1F4B0056F792 /* DropDownView.swift */,
+				426A33BF2A6C1F4B0056F792 /* MenuSection.swift */,
+				426A33C02A6C1F4B0056F792 /* ExpandedList.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		426A33C12A6C1F4B0056F792 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				426A33C22A6C1F4B0056F792 /* RequestPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		426A33C32A6C1F4B0056F792 /* TicketingPage */ = {
+			isa = PBXGroup;
+			children = (
+				426A33C42A6C1F4B0056F792 /* ViewModels */,
+				426A33C62A6C1F4B0056F792 /* Presenters */,
+				426A33C92A6C1F4B0056F792 /* Model */,
+			);
+			path = TicketingPage;
+			sourceTree = "<group>";
+		};
+		426A33C42A6C1F4B0056F792 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				426A33C52A6C1F4B0056F792 /* TicketDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		426A33C62A6C1F4B0056F792 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				426A33C72A6C1F4B0056F792 /* TicketView.swift */,
+				426A33C82A6C1F4B0056F792 /* TicketListDetailViews.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		426A33C92A6C1F4B0056F792 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				426A33CA2A6C1F4B0056F792 /* TicketRepositorySample.swift */,
+				426A33CB2A6C1F4B0056F792 /* TicketingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		85F7F5E02A6AD65E0064FA0C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				426A33B92A6C1F4B0056F792 /* RequestPage */,
+				426A33C32A6C1F4B0056F792 /* TicketingPage */,
 				85F7F5E12A6AD65E0064FA0C /* Home */,
 				85F7F5ED2A6AD65E0064FA0C /* AccountPage */,
 				85F7F5F12A6AD65E0064FA0C /* Feature1 */,
@@ -440,25 +542,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F7F6132A6AD65E0064FA0C /* MenuView.swift in Sources */,
+				426A33D12A6C1F4B0056F792 /* TicketDetailViewModel.swift in Sources */,
+				426A33D52A6C1F4B0056F792 /* TicketingModel.swift in Sources */,
 				85F7F61D2A6AD65E0064FA0C /* ProfileRepositorySample.swift in Sources */,
 				85F7F6162A6AD65E0064FA0C /* Feature1ViewModel.swift in Sources */,
 				85F7F6222A6AD65E0064FA0C /* Color+Theme.swift in Sources */,
 				85F7F6112A6AD65E0064FA0C /* PointView.swift in Sources */,
+				426A33CD2A6C1F4B0056F792 /* DropDownView.swift in Sources */,
 				85F7F61F2A6AD65E0064FA0C /* HeightPreferenceKey.swift in Sources */,
 				85F7F6102A6AD65E0064FA0C /* MenuModel.swift in Sources */,
+				426A33D42A6C1F4B0056F792 /* TicketRepositorySample.swift in Sources */,
 				85F7F6182A6AD65E0064FA0C /* Feature1Model.swift in Sources */,
+				426A33D02A6C1F4B0056F792 /* RequestPageView.swift in Sources */,
 				85F7F60F2A6AD65E0064FA0C /* HomeViewModels.swift in Sources */,
+				426A33CE2A6C1F4B0056F792 /* MenuSection.swift in Sources */,
 				85F7F61B2A6AD65E0064FA0C /* SettingView.swift in Sources */,
+				426A33CF2A6C1F4B0056F792 /* ExpandedList.swift in Sources */,
 				85F7F6212A6AD65E0064FA0C /* AssistanceListDetailViews.swift in Sources */,
 				85F7F6122A6AD65E0064FA0C /* LifeStyleMenuView.swift in Sources */,
 				85F7F61E2A6AD65E0064FA0C /* ProfileModel.swift in Sources */,
 				85F7F61A2A6AD65E0064FA0C /* Feature1View.swift in Sources */,
+				426A33D22A6C1F4B0056F792 /* TicketView.swift in Sources */,
 				85F7F6202A6AD65E0064FA0C /* RoundedCorner.swift in Sources */,
 				85F7F6192A6AD65E0064FA0C /* Feature1Component1.swift in Sources */,
 				85F7F6172A6AD65E0064FA0C /* Feature1RepositorySample.swift in Sources */,
+				426A33CC2A6C1F4B0056F792 /* RequestDataModel.swift in Sources */,
 				85F7F6142A6AD65E0064FA0C /* HomeView.swift in Sources */,
 				423FB93D2A61587E001C9EC5 /* ContentView.swift in Sources */,
 				423FB93B2A61587E001C9EC5 /* team1nc3App.swift in Sources */,
+				426A33D32A6C1F4B0056F792 /* TicketListDetailViews.swift in Sources */,
 				85F7F6152A6AD65E0064FA0C /* AccountPageViews.swift in Sources */,
 				85F7F61C2A6AD65E0064FA0C /* AssitanceListDetailViewModel.swift in Sources */,
 			);
