@@ -80,8 +80,4 @@ class APIFetcher: ObservableObject {
         fetchData("/tickets", responseType: BaseResponse<[Ticket]>.self)
     }
     
-    func fetchTicketPrev() {
-        fetchData("/tickets-prev", responseType: BaseResponse<[Ticket]>.self)
-    }
-    
 }
