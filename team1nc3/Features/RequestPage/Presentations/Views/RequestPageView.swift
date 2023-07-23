@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct RequestPageView: View {
-    let dummyUser = MRTUser.getDummyData()
     
     @State var selected: Bool = false
+    let dummyMRTUser = MRTSpecialUser.getDummyData()
+    
+    // Step 1: Initialize the APIFetcher
+    @StateObject private var apiFetcher = APIFetcher()
+    
+    // To hold the received data
+    @State private var specialUser: MRTSpecialUser?
+    @State private var errorMessage: String?
+    
+    /*
+     Need to call API
+     SpecialUser Budi Santoso / parameter dan payload request
+     Ticket
+     ETA + time picker
+     Assistive Tool
+     */
     
     
     var body: some View {
@@ -23,12 +38,12 @@ struct RequestPageView: View {
                 Spacer()
                 VStack (spacing: 0){
                     MenuSection(sectionHeaderTitle: "Full Name") {
-                        Text("Monica Christanta").font(.body)
+                        Text(dummyMRTUser.name).font(.body)
                         Divider()
                     }
                     
                     MenuSection(sectionHeaderTitle: "Phone Number") {
-                        Text("+628555551715").font(.body)
+                        Text(dummyMRTUser.phone).font(.body)
                         Divider()
                     }
                     
@@ -90,8 +105,15 @@ struct RequestPageView: View {
                 }
             }
         }
-        
+        .onAppear() {
+            fetchingUser()
+        }
     }
+    
+    private func fetchingUser() {
+        apiFetcher.fetchMRTSpecialUser()
+    }
+    
 }
 
 struct RequestPageView_Previews: PreviewProvider {
