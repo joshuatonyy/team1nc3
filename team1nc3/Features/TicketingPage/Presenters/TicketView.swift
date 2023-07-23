@@ -50,6 +50,8 @@ struct TicketView: View {
             }
             .presentationDetents([.height(self.detentHeight)])
     }
+        .onAppear{
+        }
     }
 }
 
