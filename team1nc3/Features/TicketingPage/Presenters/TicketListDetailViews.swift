@@ -31,13 +31,17 @@ struct TicketListDetailViews: View {
     @Environment(\.dismiss) var dismiss
     var isDisabled: Bool = false
     @StateObject private var ticketListDetailViewModel = TicketDetailViewModel()
+    @StateObject var apiFetcher = APIFetcher()
     @State private var selectedSegment = 0
+    @State private var dataUser: ProfileUser? = nil
     
     @State private var selectedDepartureStationIndex = 0
     @State private var selectedArrivalStationIndex = 0
     @State private var needsWheelchairAssistance = false
     @State private var selectedTime = Date()
-
+    @State private var dataStationsDD: [String] = []
+    @State private var dataStations: [Station] = []
+    @Binding var isPresentingAlert: Bool
 
     let stations = ["Select a Station", "Lebak Bulus Grab", "Fatmawati Indomaret", "Cipete Raya", "Haji Nawi", "Blok A", "Blok M BCA", "ASEAN", "Senayan", "Istora Mandiri", "Bendungan Hilir", "Setiabudi Astra", "Dukuh Atas BNI", "Bundaran HI"]
     
@@ -85,15 +89,15 @@ struct TicketListDetailViews: View {
                         .fontWeight(.light)
                         .padding(.top, 8)
                     Picker(selection: $selectedDepartureStationIndex, label: Text("")) {
-                        ForEach(0..<stations.count) { index in
-                            Text(self.stations[index])
+                        ForEach(0..<dataStationsDD.count, id: \.self) { index in
+                            Text(self.dataStationsDD[index])
                                 .foregroundColor(Color.black)
                                 .tag(index)
                         }
                     }
                     .font(.subheadline)
                     .padding(.top, 8)
-
+                    
                     // Arrival Station
                     Text("Arrival Station")
                         .foregroundColor(Color("neutral-80"))
@@ -101,8 +105,8 @@ struct TicketListDetailViews: View {
                         .fontWeight(.light)
                         .padding(.top, 8)
                     Picker(selection: $selectedArrivalStationIndex, label: Text("")) {
-                        ForEach(0..<stations.count) { index in
-                            Text(self.stations[index]).tag(index)
+                        ForEach(0..<dataStationsDD.count, id: \.self) { index in
+                            Text(self.dataStationsDD[index]).tag(index)
                         }
                     }
                     .foregroundColor(Color.black)
@@ -129,6 +133,7 @@ struct TicketListDetailViews: View {
                         .padding(.top, 8)
                     DatePicker("", selection: $selectedTime, displayedComponents: [.hourAndMinute])
                         .labelsHidden()
+                        .disabled(true)
                         .padding(.top, 8)
                     
                     Button (action: {
@@ -136,6 +141,20 @@ struct TicketListDetailViews: View {
                         if !isDisabled{
                             print("do Some Magic")
                             dismiss()
+                            var data: [String:Any] = [:]
+                            
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                            dateFormatter.locale = Locale(identifier: "id")
+                            data["departure_station_id"] = dataStations[selectedDepartureStationIndex].id
+                            data["arrival_station_id"] = dataStations[selectedArrivalStationIndex].id
+                            data["ETA"] =                        dateFormatter.string(from: selectedTime)
+                            data["email"] = dataUser?.email
+                            apiFetcher.postDataNewTicket(parameter: data, completionData: {data, err in
+                                print(data)
+                                isPresentingAlert = true
+                                
+                            })
                         }
                     }, label: {
                         if isDisabled {
@@ -166,8 +185,26 @@ struct TicketListDetailViews: View {
         }
         .cornerRadius(8, corners: [.topLeft,.topRight])
         .onAppear {
-            ticketListDetailViewModel.getProfile()
-            ticketListDetailViewModel.getTodayDate()
+//            ticketListDetailViewModel.getProfile()
+//            ticketListDetailViewModel.getTodayDate()
+        
+            selectedTime = Date().addingTimeInterval(30 * 60)
+            
+            apiFetcher.fetchUserProfile(completionData: {data, err in
+                DispatchQueue.main.async {
+                    
+                    dataUser = data?.message ?? ProfileUser(name: "", email: "", phone: "", dob: "", gender: "", id_card_number: "", disability: "")
+                }
+            })
+            
+            apiFetcher.fetchStation(completionData: {data, err in
+                dataStations = data?.message ?? []
+                DispatchQueue.main.async {
+                    for t in data?.message ?? []  {
+                        self.dataStationsDD.append("\(t.name ?? "")")
+                    }
+                }
+            })
         }
     }
 }
@@ -175,6 +212,6 @@ struct TicketListDetailViews: View {
 
 struct TicketListDetailViews_Previews: PreviewProvider {
     static var previews: some View {
-        TicketListDetailViews()
+        TicketListDetailViews(isPresentingAlert: .constant(false))
     }
 }

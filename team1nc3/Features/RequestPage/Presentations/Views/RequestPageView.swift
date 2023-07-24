@@ -11,6 +11,7 @@ struct RequestPageView: View {
     
     @State var selected: Bool = false
     let dummyMRTUser = MRTSpecialUser.getDummyData()
+    @State private var dataUser: ProfileUser? = nil
     
     // Step 1: Initialize the APIFetcher
     @StateObject var apiFetcher = APIFetcher()
@@ -20,7 +21,18 @@ struct RequestPageView: View {
     @State private var errorMessage: String?
     
     @State var dataTicketsDD: [String] = []
+    @State var dataStationsDD: [String] = []
     @State var dataAssistiveToolsDD: [String] = []
+    @State var fullName: [String] = []
+    @State var email: [String] = []
+    @State private var selectedTrip: Ticket? = nil
+    @State private var selectedAssistiveTools: AssistiveTools? = nil
+    @State private var selectedTime = Date()
+    
+    @State var assistiveTools: [AssistiveTools] = []
+    @State var tickets: [Ticket] = []
+    @State private var isPresentingAlert: Bool = false
+    
     
     /*
      Need to call API
@@ -42,12 +54,12 @@ struct RequestPageView: View {
                     Spacer()
                     VStack (spacing: 0){
                         MenuSection(sectionHeaderTitle: "Full Name") {
-                            Text(dummyMRTUser.name).font(.body)
+                            Text(dataUser?.name ?? "").font(.body)
                             Divider()
                         }
                         
                         MenuSection(sectionHeaderTitle: "Phone Number") {
-                            Text(dummyMRTUser.phone).font(.body)
+                            Text(dataUser?.phone ?? "").font(.body)
                             Divider()
                         }
                         
@@ -55,7 +67,12 @@ struct RequestPageView: View {
                         MenuSection(sectionHeaderTitle: "Trip") {
                             // Dropdown Trip from all today's ticket
                             DropDownView(dataOptions: $dataTicketsDD ,completionHandler: { i in
-                                print(apiFetcher.tickets[i])
+                                
+                                selectedTrip = tickets[i]
+                                let dateFormatter = DateFormatter()
+                                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                                selectedTime =
+                                dateFormatter.date(from: tickets[i].ETA ?? "") ?? Date()
                             })
                             Divider()
                         }
@@ -63,16 +80,20 @@ struct RequestPageView: View {
                         
                         MenuSection(sectionHeaderTitle: "Estimated Time of Arrival") {
                             // Dropdown ETA from column ETA
-                            DropDownView(dataOptions: $dataTicketsDD ,completionHandler: { i in
-                                
-                            })
+                            //                            DropDownView(dataOptions: $dataTicketsDD ,completionHandler: { i in
+                            //
+                            //                            })
+                            DatePicker("", selection: $selectedTime, displayedComponents: [.hourAndMinute])
+                                .labelsHidden()
+                                .disabled(true)
+                                .padding(.top, 8)
                             Divider()
                         }
                         
                         MenuSection(sectionHeaderTitle: "Types of help needed") {
                             // assistive tool
                             DropDownView(dataOptions: $dataAssistiveToolsDD ,completionHandler: { i in
-                                
+                                selectedAssistiveTools = assistiveTools[i]
                             })
                             
                         }
@@ -100,6 +121,21 @@ struct RequestPageView: View {
                     
                     Button {
                         // code
+                        
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                        dateFormatter.locale = Locale(identifier: "id")
+                        
+                        var data: [String:Any] = [:]
+                        data["ticket_id"] = selectedTrip?.ticket_id
+                        data["assistive_tool_id"] =   selectedAssistiveTools?.id
+                        
+                        apiFetcher.postDataNewRequest(parameter: data, completionData: {data, err in
+                            print(data)
+                            isPresentingAlert = true
+                        })
+                        
+                        
                     } label: {
                         Text("Request").foregroundColor(selected ? .white : .gray)
                             .padding()
@@ -116,30 +152,41 @@ struct RequestPageView: View {
                     }
                 }
             }
-        }
+        }.alert("Staaf is on the way.", isPresented: $isPresentingAlert, actions: {
+            
+        })
         .onAppear {
             fetchingUser()
             fetchTicket()
             fetchAssistiveTools()
             
-            dataTicketsDD = apiFetcher.ticketsDD
-            dataAssistiveToolsDD = apiFetcher.assistiveToolsDD
+            
         }
     }
     
     private func fetchingUser() {
-        apiFetcher.fetchMRTSpecialUser(completionData: {data, err in
-//            print("datadata1: \(data?.message)")
-//            print("datadata2: \(err)")
-        
+        apiFetcher.fetchUserProfile(completionData: {data, err in
+            //            print("datadata1: \(data?.message)")
+            //            print("datadata2: \(err)")
+            DispatchQueue.main.async {
+                
+                dataUser = data?.message ?? ProfileUser(name: "", email: "", phone: "", dob: "", gender: "", id_card_number: "", disability: "")
+            }
+            
         })
     }
     
     
     private func fetchTicket() {
-        apiFetcher.fetchTicket(completionData: {data, err in
-            for t in data?.message ?? []  {
-                self.dataTicketsDD.append("\(t.ticket_id ?? 0)")
+        apiFetcher.fetchTicketDummy(completionData: {data, err in
+            tickets = data?.message ?? []
+            dataTicketsDD = []
+
+            if(tickets.count > 0){
+                selectedTrip = tickets[0]
+            }
+            for t in tickets  {
+                self.dataTicketsDD.append("\(t.departure_station_name ?? "") - \(t.arrival_station_name ?? "")")
             }
         })
     }
@@ -147,7 +194,12 @@ struct RequestPageView: View {
     
     private func fetchAssistiveTools() {
         apiFetcher.fetchAssistiveTools(completionData: {data, err in
-            for t in data?.message ?? []  {
+            assistiveTools = data?.message ?? []
+            dataAssistiveToolsDD = []
+            if(assistiveTools.count > 0){
+                selectedAssistiveTools = assistiveTools[0]
+            }
+            for t in assistiveTools  {
                 self.dataAssistiveToolsDD.append("\(t.tool_name ?? "")")
             }
         })

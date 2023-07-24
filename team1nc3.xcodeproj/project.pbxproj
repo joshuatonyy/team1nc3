@@ -32,6 +32,7 @@
 		426A33D32A6C1F4B0056F792 /* TicketListDetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33C82A6C1F4B0056F792 /* TicketListDetailViews.swift */; };
 		426A33D42A6C1F4B0056F792 /* TicketRepositorySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33CA2A6C1F4B0056F792 /* TicketRepositorySample.swift */; };
 		426A33D52A6C1F4B0056F792 /* TicketingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A33CB2A6C1F4B0056F792 /* TicketingModel.swift */; };
+		8570069C2A6E58A200302567 /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8570069B2A6E58A200302567 /* ProfileUser.swift */; };
 		85F7F60F2A6AD65E0064FA0C /* HomeViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7F5E32A6AD65E0064FA0C /* HomeViewModels.swift */; };
 		85F7F6102A6AD65E0064FA0C /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7F5E52A6AD65E0064FA0C /* MenuModel.swift */; };
 		85F7F6112A6AD65E0064FA0C /* PointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F7F5E82A6AD65E0064FA0C /* PointView.swift */; };
@@ -82,6 +83,7 @@
 		426A33C82A6C1F4B0056F792 /* TicketListDetailViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListDetailViews.swift; sourceTree = "<group>"; };
 		426A33CA2A6C1F4B0056F792 /* TicketRepositorySample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketRepositorySample.swift; sourceTree = "<group>"; };
 		426A33CB2A6C1F4B0056F792 /* TicketingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketingModel.swift; sourceTree = "<group>"; };
+		8570069B2A6E58A200302567 /* ProfileUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
 		85F7F5E32A6AD65E0064FA0C /* HomeViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModels.swift; sourceTree = "<group>"; };
 		85F7F5E52A6AD65E0064FA0C /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		85F7F5E82A6AD65E0064FA0C /* PointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				0F06F5F12A6CE065001D288D /* GeneralModel */,
 				0F06F5EE2A6CE065001D288D /* Gender.swift */,
+				8570069B2A6E58A200302567 /* ProfileUser.swift */,
 				0F06F5EF2A6CE065001D288D /* MRTSpecialUser.swift */,
 				0F06F5F02A6CE065001D288D /* AssistiveTools.swift */,
 				0F06F5F42A6CE065001D288D /* Station.swift */,
@@ -642,6 +645,7 @@
 				0F06F5FE2A6D5778001D288D /* APIFetcher.swift in Sources */,
 				423FB93D2A61587E001C9EC5 /* ContentView.swift in Sources */,
 				423FB93B2A61587E001C9EC5 /* team1nc3App.swift in Sources */,
+				8570069C2A6E58A200302567 /* ProfileUser.swift in Sources */,
 				426A33D32A6C1F4B0056F792 /* TicketListDetailViews.swift in Sources */,
 				85F7F6152A6AD65E0064FA0C /* AccountPageViews.swift in Sources */,
 				85F7F61C2A6AD65E0064FA0C /* AssitanceListDetailViewModel.swift in Sources */,
@@ -771,7 +775,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"team1nc3/Preview Content\"";
 				DEVELOPMENT_TEAM = VZ4YRNP8JB;
 				ENABLE_PREVIEWS = YES;
@@ -805,7 +809,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"team1nc3/Preview Content\"";
 				DEVELOPMENT_TEAM = VZ4YRNP8JB;
 				ENABLE_PREVIEWS = YES;

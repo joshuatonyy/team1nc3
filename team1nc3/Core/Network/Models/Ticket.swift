@@ -10,8 +10,8 @@ import Foundation
 struct Ticket: Codable {
 
     let ticket_id: Int?
-    let departure_station: String?
-    let arrival_station: String?
+    let departure_station_name: String?
+    let arrival_station_name: String?
     let purchase_date: String?
     let ETA: String?
     let user_name: String?
