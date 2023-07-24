@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F06F5E92A6CE008001D288D /* Network in Resources */ = {isa = PBXBuildFile; fileRef = 0F06F5E82A6CE008001D288D /* Network */; };
 		0F06F5F82A6D3954001D288D /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06F5F72A6D3954001D288D /* APIMethod.swift */; };
 		0F06F5F92A6D3DAE001D288D /* MRTSpecialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06F5EF2A6CE065001D288D /* MRTSpecialUser.swift */; };
 		0F06F5FC2A6D44D9001D288D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F06F5FB2A6D44D8001D288D /* CoreLocation.framework */; };
@@ -56,7 +55,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F06F5E82A6CE008001D288D /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Network; path = ../../Network; sourceTree = "<group>"; };
 		0F06F5EB2A6CE065001D288D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0F06F5EC2A6CE065001D288D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		0F06F5EE2A6CE065001D288D /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		423FB9392A61587E001C9EC5 /* team1nc3 */ = {
 			isa = PBXGroup;
 			children = (
-				0F06F5E82A6CE008001D288D /* Network */,
 				85F7F6232A6AD91D0064FA0C /* Info.plist */,
 				423FB9482A615953001C9EC5 /* Config */,
 				85F7F60C2A6AD65E0064FA0C /* Core */,
@@ -590,7 +587,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F06F5E92A6CE008001D288D /* Network in Resources */,
 				423FB9422A615880001C9EC5 /* Preview Assets.xcassets in Resources */,
 				423FB93F2A615880001C9EC5 /* Assets.xcassets in Resources */,
 			);
