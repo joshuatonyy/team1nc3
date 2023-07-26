@@ -48,7 +48,6 @@ class APIFetcher: ObservableObject {
                 case .success(let data):
                     print("--- data: \(data)")
                     // Handle the received data as needed
-                    
                 }
             }
         }
